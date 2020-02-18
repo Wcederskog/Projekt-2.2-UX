@@ -10,14 +10,14 @@ var farveskift = document.querySelector('.colorChanger')
 
 function start(){
 startTime();
-output.innerHTML = (number + '&#8451');
+output.innerHTML = (number + '&#176');
 	
 }
 
 
 
 slider.oninput = function (){
-output.innerHTML = (this.value + '&#8451');
+output.innerHTML = (this.value + '&#176');
 number = this.value;
 	
 }
@@ -28,7 +28,7 @@ if (number < 28)
 {	
 slider.value++;
 number++;
-output.innerHTML =  (number + '&#8451');
+output.innerHTML =  (number + '&#176');
 skiftfarve()
 return;
 	
@@ -39,7 +39,7 @@ function minus () {
 	if (number > 18) {
 slider.value--;
 number--;
-output.innerHTML =  (number + '&#8451');
+output.innerHTML =  (number + '&#176');
 skiftfarve()
 return;
 }
