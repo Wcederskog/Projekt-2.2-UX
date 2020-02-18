@@ -41,9 +41,11 @@ nav {
 }
 
 .slidecontainer{
-	width: 75%;
-	margin:auto;
+	width: 50%;
+	margin-left: 5%;
 	padding-bottom: 5%;
+	float: left;
+	text-align: center;
 	
 	
 }
@@ -52,12 +54,13 @@ nav {
   -webkit-appearance: none; 
   appearance: none;
   width: 100%; 
-  height: 5px;
+  height: 7px;
   border-radius: 5px;
   background-image: linear-gradient(to right, blue, red);
   outline: none; 
   -webkit-transition: .2s; 
   transition: opacity .2s;
+	border: 1px solid white;
 	}
 
 
@@ -94,17 +97,23 @@ nav {
 }
 
 .tempknap{
-	width: 70px;
-	height: 70px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
 	font-size: 2em;
 	cursor: pointer;
 	border-style:none;
 	background-color: white;
 	border: 1px solid black;
-	margin: 1%;
+	margin-top: 5%;
 	box-shadow: 0px 1px;
-	
+}
+
+#varmere {
+margin-left: 5%;
+}
+#koldere {
+	margin-right: 5%;
 }
 
 button:focus {
@@ -134,7 +143,7 @@ button:hover{
 
 #vent2u{
 	text-decoration: none;
-	color: #FF8B00;
+	color: white;
 	text-shadow: -1px -1px 0 black;
 	font-size: 2em;
 	margin-left: 5%;
@@ -155,46 +164,43 @@ button:hover{
 	font-weight: bold;
 	font-size: 1.5em;
 }
-/* The Overlay (background) */
+
 .overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
   height: 100%;
   width: 0;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed;
+  z-index: 1; 
   left: 0;
   top: 0;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.9);
   overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  transition: 0.5s; 
 }
 
-/* Position the content inside the overlay */
+/* Position af elementerne */
 .overlay-content {
   position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  top: 25%; 
+  width: 100%; 
+  text-align: center; 
+  margin-top: 30px; 
 }
 
-/* The navigation links inside the overlay */
+/* Navigation links */
 .overlay a {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
-}
-
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
   color: #f1f1f1;
+  display: block; 
+  transition: 0.3s; 
 }
 
-/* Position the close button (top right corner) */
+
+
+
+/* Close button*/
 .overlay .closebtn {
   position: absolute;
   top: 20px;
@@ -223,6 +229,74 @@ margin-right: 5%;
 	background-color: red;
 }
 
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 51px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.glider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.glider:before {
+  position: absolute;
+  content: "";
+  height: 39px;
+  width: 39px;
+  left: 6px;
+  bottom: 6px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .glider {
+  background-color: #45e760;
+}
+
+input:focus + .glider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .glider:before {
+  -webkit-transform: translateX(39px);
+  -ms-transform: translateX(39px);
+  transform: translateX(39px);
+}
+
+/* Rounded sliders */
+.glider.round {
+  border-radius: 51px;
+}
+
+.glider.round:before {
+  border-radius: 50%;
+}
+#glidercontainer {
+	float: right;
+	margin-right: 15%;
+	margin-top: 3%;
+	
+}
 
 	
 	
